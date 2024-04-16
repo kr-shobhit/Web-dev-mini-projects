@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Details Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <h1>Resume Builder Form</h1>
+    <form method="post" id="inputFORM">
+        <fieldset>
+            <h3>Basic Details</h3>
+            <label for="first_name">First Name:</label>
+            <input type="text" placeholder="Example: Rohit" id="first_name" name="first_name" required><br><br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" placeholder="Example: Raj" id="last_name" name="last_name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Example: rohitraj@gmail.com" id="email" name="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" placeholder="+91" id="mobile" name="mobile" maxlength="10" minlength="10"
+                required><br><br>
+
+            <label>Your State:</label>
+            <input type="text" id="address_state" name="address_state" placeholder="Example: Delhi" required><br><br>
+
+            <label>Your Country:</label>
+            <input type="text" id="address_country" name="address_country" placeholder="Example: India"
+                required><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Education Details - High School</h3>
+
+            <label for="schoolname">School Name:</label>
+            <input type="text" id="schoolname" name="schoolname" required>
+
+            <label for="board">Board:</label>
+            <input type="text" id="board" name="board" required><br><br>
+
+            <label for="percentage">Percentage:</label>
+            <input type="number" id="percentage" name="percentage" required onchange="validatePercentage(this)"
+                step="0.01">
+
+            <label for="activity">Activity or Sports Participated:</label>
+            <input type="text" id="activity" name="activity" required><br><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Education Details - Undergraduate</h3>
+
+            <label for="schoolname">University Name:</label>
+            <input type="text" id="ugname" name="ugname" required>
+
+            <label for="board">Course Name:</label>
+            <input type="text" id="ug_course" name="ug_course" required><br><br>
+
+            <label for="percentage">Cumulative GPA:</label>
+            <input type="number" id="ug_percentage" name="ug_percentage" required onchange="validateCGPA(this)"
+                step="0.01">
+
+            <label for="activity">Activity or Sports Participated:</label>
+            <input type="text" id="ug_activity" name="ug_activity" required><br><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Education Details - Postgraduate</h3>
+
+            <label for="schoolname">University Name:</label>
+            <input type="text" id="pgname" name="pgname" required>
+
+            <label for="board">Course Name:</label>
+            <input type="text" id="pg_course" name="pg_course" required><br><br>
+
+            <label for="percentage">Cumulative GPA:</label>
+            <input type="number" id="pg_percentage" name="pg_percentage" required onchange="validateCGPA(this)"
+                step="0.01">
+
+            <label for="activity">Activity or Sports Participated:</label>
+            <input type="text" id="pg_activity" name="pg_activity" required><br><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Skills</h3>
+            <label for="skills">(Separate With comma):</label><br><br>
+            <textarea id="skills" placeholder="Max 20 Words" rows="4" cols="50" name="skills"
+                required></textarea><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Work Experience</h3>
+            <label>Current Company Name:</label>
+            <input type="text" id="currentcompany" name="currentcompany" required><br>
+
+            <label>Position:</label>
+            <input type="text" id="position_current" name="position_current" required><br>
+
+            <label>Joining Date:</label>
+            <input type="date" id="joining_date_current" name="joining_date_current" required><br>
+
+            <label>Explain Your Work / Projects:</label>
+            <textarea id="work1" name="work1" rows="2" cols="30"
+                placeholder="Explain Your First Project Or Work Done. Max 20 Words." required></textarea><br>
+            <textarea id="work2" name="work2" rows="2" cols="30"
+                placeholder="Explain Your Second Project Or Work Done. Max 20 Words." required></textarea><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Last Working / Internship Details</h3>
+            <label>Company Name:</label>
+            <input type="text" id="intern_company" name="intern_company" required><br>
+
+            <label>Position:</label>
+            <input type="text" id="position_intern" name="position_intern" required><br>
+
+            <label>Joining Date:</label>
+            <input type="date" id="joining_date_intern" name="joining_date_intern" required><br>
+
+            <label>Completion Date:</label>
+            <input type="date" id="leaving_date_intern" name="leaving_date_intern" required><br>
+
+            <label>Explain Your Work / Projects:</label>
+            <textarea id="intern1" name="intern1" rows="2" cols="30"
+                placeholder="Explain Your First Project Or Work Done. Max 20 Words." required></textarea><br>
+            <textarea id="intern2" name="intern2" rows="2" cols="30"
+                placeholder="Explain Your Second Project Or Work Done. Max 20 Words." required></textarea><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Achievments and Awards</h3>
+            <label>Your Achievments:</label>
+            <input type="text" id="achieve1" name="achieve1" placeholder="Enter First Achievment or Award" required>
+            <input type="text" id="achieve2" name="achieve2" placeholder="Enter Second Achievment or Award" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Certifications</h3>
+            <label>Your Certifications:</label>
+            <input type="text" id="certificate1" name="certificate1" placeholder="Enter First Certificate" required>
+            <input type="text" id="certificate2" name="certificate2" placeholder="Enter Second Certificate" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Languages</h3>
+            <label>Known Languages:</label>
+            <input type="text" id="languages" name="languages" placeholder="Enter Known Languages Separated by Comma"
+                required>
+        </fieldset>
+        <div class="buttons">
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+
+    <script>
+
+        function validatePercentage(input) {
+            var value = parseFloat(input.value);
+            if (isNaN(value) || value < 0 || value > 100) {
+                alert("Percentage must be a number between 0 and 100");
+                input.value = "";
+            }
+        }
+
+        function validateCGPA(input) {
+            var value = parseFloat(input.value);
+            if (isNaN(value) || value < 0 || value > 10) {
+                alert("CGPA must be a number between 0 and 10");
+                input.value = "";
+            }
+        }
+
+        const inputForm = document.getElementById("inputFORM");
+
+        inputForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form inputs
+            const firstName = document.getElementById("first_name").value;
+            const lastName = document.getElementById("last_name").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobile").value;
+            const state = document.getElementById("address_state").value;
+            const country = document.getElementById("address_country").value;
+
+            // High School Details
+            const schoolName = document.getElementById("schoolname").value;
+            const board = document.getElementById("board").value;
+            const schoolPercentage = document.getElementById("percentage").value;
+            const schoolActivity = document.getElementById("activity").value;
+
+            // Undergraduate Details
+            const ugName = document.getElementById("ugname").value;
+            const ugCourse = document.getElementById("ug_course").value;
+            const ugPercentage = document.getElementById("ug_percentage").value;
+            const ugActivity = document.getElementById("ug_activity").value;
+
+            // Postgraduate Details
+            const pgName = document.getElementById("pgname").value;
+            const pgCourse = document.getElementById("pg_course").value;
+            const pgPercentage = document.getElementById("pg_percentage").value;
+            const pgActivity = document.getElementById("pg_activity").value;
+
+            // Skills
+            const skills = document.getElementById("skills").value;
+
+            // Work Experience
+            const currentCompany = document.getElementById("currentcompany").value;
+            const currentPosition = document.getElementById("position_current").value;
+            const joiningDateCurrent = document.getElementById("joining_date_current").value;
+            const work1 = document.getElementById("work1").value;
+            const work2 = document.getElementById("work2").value;
+
+            // Last Internship Details
+            const internCompany = document.getElementById("intern_company").value;
+            const internPosition = document.getElementById("position_intern").value;
+            const joiningDateIntern = document.getElementById("joining_date_intern").value;
+            const leavingDateIntern = document.getElementById("leaving_date_intern").value;
+            const intern1 = document.getElementById("intern1").value;
+            const intern2 = document.getElementById("intern2").value;
+
+            // Achievements and Awards
+            const achieve1 = document.getElementById("achieve1").value;
+            const achieve2 = document.getElementById("achieve2").value;
+
+            // Certifications
+            const certificate1 = document.getElementById("certificate1").value;
+            const certificate2 = document.getElementById("certificate2").value;
+
+            // Languages
+            const languages = document.getElementById("languages").value;
+
+            // Store form inputs in localStorage
+            localStorage.setItem("firstName", firstName);
+            localStorage.setItem("lastName", lastName);
+            localStorage.setItem("email", email);
+            localStorage.setItem("mobile", mobile);
+            localStorage.setItem("state", state);
+            localStorage.setItem("country", country);
+
+            localStorage.setItem("schoolName", schoolName);
+            localStorage.setItem("board", board);
+            localStorage.setItem("schoolPercentage", schoolPercentage);
+            localStorage.setItem("schoolActivity", schoolActivity);
+
+            localStorage.setItem("ugName", ugName);
+            localStorage.setItem("ugCourse", ugCourse);
+            localStorage.setItem("ugPercentage", ugPercentage);
+            localStorage.setItem("ugActivity", ugActivity);
+
+            localStorage.setItem("pgName", pgName);
+            localStorage.setItem("pgCourse", pgCourse);
+            localStorage.setItem("pgPercentage", pgPercentage);
+            localStorage.setItem("pgActivity", pgActivity);
+
+            localStorage.setItem("skills", skills);
+
+            localStorage.setItem("currentCompany", currentCompany);
+            localStorage.setItem("currentPosition", currentPosition);
+            localStorage.setItem("joiningDateCurrent", joiningDateCurrent);
+            localStorage.setItem("work1", work1);
+            localStorage.setItem("work2", work2);
+
+            localStorage.setItem("internCompany", internCompany);
+            localStorage.setItem("internPosition", internPosition);
+            localStorage.setItem("joiningDateIntern", joiningDateIntern);
+            localStorage.setItem("leavingDateIntern", leavingDateIntern);
+            localStorage.setItem("intern1", intern1);
+            localStorage.setItem("intern2", intern2);
+
+            localStorage.setItem("achieve1", achieve1);
+            localStorage.setItem("achieve2", achieve2);
+
+            localStorage.setItem("certificate1", certificate1);
+            localStorage.setItem("certificate2", certificate2);
+
+            localStorage.setItem("languages", languages);
+
+            // Open the resume page in a new tab
+            window.open("resume.html", "_blank");
+        });
+
+    </script>
+
+</body>
+
+</html>

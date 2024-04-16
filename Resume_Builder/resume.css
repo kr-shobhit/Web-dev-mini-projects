@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resume_page {
+    display: flex;
+    height: auto;
+    width: 595px;
+    margin: 10px;
+    border: 4px solid black;
+    border-radius: 8px;
+    background-color: #fff;
+    gap: 2px;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first_name,
+#last_name {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+#designation {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contact_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+    font-size: 12px;
+}
+
+.line {
+    height: auto;
+    border: 1px solid rgb(64, 63, 63);
+    width: 100%;
+}
+
+.name_box {
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.education_box {
+    height: auto;
+    width: 100%;
+}
+
+.work_box {
+    height: auto;
+    width: 100%;
+}
+
+.skill_box {
+    height: auto;
+    width: 100%;
+}
+
+.achievements_box {
+    height: auto;
+    width: 100%;
+}
+
+.certificate_box {
+    height: auto;
+    width: 100%;
+}
+
+.language_box {
+    height: auto;
+    width: 100%;
+}
+
+.education_names {
+    color: rgb(255, 69, 69);
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+#school_marks,
+#ug_marks,
+#pg_marks {
+    text-transform: uppercase;
+}
+
+#course_school,
+#course_ug,
+#course_pg {
+    text-transform: capitalize;
+}
+
+#school_board {
+    color: black;
+}
+
+.education_details {
+    font-size: 13px;
+}
+
+.heads {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: rgb(41, 173, 255);
+    font-size: medium;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+}
+
+.top button {
+    color: black;
+    background-color: lightgreen;
+    padding: 3px 10px;
+    border-radius: 8px;
+    border: 1px black solid;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#mail {
+    text-transform: lowercase;
+}
+
+#phone {
+    text-transform: uppercase;
+}
+
+#address {
+    text-transform: capitalize;
+}
+
+.address {
+    color: grey;
+    font-size: small;
+}
+
+.job_designation {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.job_company {
+    text-transform: capitalize;
+}
+
+#skills,
+#languages {
+    text-transform: capitalize;
+}
+
+.job_projects {
+    color: rgb(32, 32, 32);
+    font-size: small;
+}
+
+i {
+    font-size: x-small;
+}
+
+.skill_box p,
+.achievements_box p,
+.certificate_box p,
+.language_box p {
+    font-size: small;
+}

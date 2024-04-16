@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="resume.css">
+
+    <!-- Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="top">
+        <h1>RESUME BUILDER</h1>
+        <div class="buttons">
+            <button type="button" onclick="createNew()">Create New</button>
+            <button type="button" onclick="downloadResumePNG()">Download As PNG</button>
+        </div>
+    </div>
+    <div class="resume_page" id="resume_div">
+        <div class="name_box">
+            <span id="first_name">Lorem</span>
+            <span id="last_name">Lorem</span>
+        </div>
+        <div class="designation_box">
+            <span id="designation">Some Good Work</span>
+        </div>
+        <div class="contact_box">
+            <span><i class="fa-solid fa-envelope"></i> <span id="email">example@gmail.com</span></span>
+            <span><i class="fa-solid fa-phone"></i> +91 <span id="mobile">1234567890</span></span>
+            <span><i class="fa-solid fa-location-dot"></i> <span id="address"><span id="state">State</span> , <span
+                        id="country">Country</span></span></span>
+        </div>
+        <div class="line"></div>
+        <div class="education_box">
+            <h3 class="heads">Educational Details</h3>
+
+            <div>
+                <span id="school_name" class="education_names">High School Name</span> (<span
+                    id="school_board">CBSE</span>)
+                <h6><span id="course_school" class="education_details">Subject / Course </span> - <span
+                        id="school_marks" class="education_details">100</span> %</h6>
+                <p class="education_details">Activities or Sports : <span id="school_activity">Some Good Work</span></p>
+            </div>
+            <hr width="60%">
+            <div>
+                <span id="ug_name" class="education_names">University Name</span> (<span id="ug_board">UG</span>)
+                <h6><span id="ug_course" class="education_details">Average Degree</span> - <span id="ug_marks"
+                        class="education_details">9.69</span> CGPA</h6>
+                <p class="education_details">Activities or Sports : <span id="ug_activities">Just Time Pass</span>
+                </p>
+            </div>
+            <hr width="60%">
+            <div>
+                <span id="pg_name" class="education_names">University Name</span> (<span id="pg_board">PG</span>)
+                <h6><span id="pg_course" class="education_details">Another Average Degree</span> - <span id="pg_marks"
+                        class="education_details">9.99</span> CGPA</h6>
+                <p class="education_details">Activities or Sports : <span id="pg_activities">Again Time Pass</span></p>
+            </div>
+        </div>
+        <div class="line"></div>
+
+        <div class="work_box">
+            <h3 class="heads">Work Experiences</h3>
+            <div>
+                <h3><span id="job_company" class="job_company">Company name</span> - <span id="job_designation"
+                        class="job_designation">Senior Software Developer</span></h3>
+                <h5 class="address"><span id="job_starting_date">Some Date</span> - Present</h5>
+                <p><i class="fa-solid fa-angle-right"></i> <span id="job_projects_done1" class="job_projects">Lorem
+                        ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quam nostrum dolore commodi.
+                        Eligendi, impedit officia voluptate autem dolores dolorem.</span></p>
+                <p><i class="fa-solid fa-angle-right"></i> <span id="job_projects_done2" class="job_projects">Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quis. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Officiis, quibusdam?</span></p>
+            </div>
+            <hr width="60%">
+            <div>
+                <h3><span id="internship_company" class="job_company">Another Comapny</span> - <span
+                        id="internship_designation" class="job_designation">Intern</span></h3>
+                <h5 class="address"><span id="internship_starting_date">Some Date</span> - <span
+                        id="internship_ending_date">Some Date</span></h5>
+                <p><i class="fa-solid fa-angle-right"></i> <span id="internship_projects_done1"
+                        class="job_projects">Lorem
+                        ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quam nostrum dolore commodi.
+                        Eligendi, impedit officia voluptate autem dolores dolorem.</span></p>
+                <p><i class="fa-solid fa-angle-right"></i> <span id="internship_projects_done2"
+                        class="job_projects">Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quis. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Officiis, quibusdam? Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Voluptas esse saepe amet sunt molestias placeat eaque debitis, libero iusto
+                        fuga veniam dolor repellat. Cupiditate delectus deserunt maiores in, unde modi earum recusandae
+                        fugiat aliquid, obcaecati animi alias ipsum eum, quas voluptate accusantium aut inventore
+                        laudantium tempore veritatis esse ea libero?</span></p>
+            </div>
+        </div>
+        <div class="line"></div>
+
+        <div class="skill_box">
+            <h3 class="heads">Skills</h3>
+            <p><span id="skills">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda incidunt nihil et
+                    numquam consequuntur dicta nemo beatae iste hic placeat.</span></p>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="achievements_box">
+            <h3 class="heads">Achievements and Awards</h3>
+            <p><span id="achivements1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                    adipisci?</span></p>
+            <p><span id="achivements2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                    adipisci?</span></p>
+        </div>
+        <div class="line"></div>
+        <div class="certificate_box">
+            <h3 class="heads">Certifications</h3>
+            <p><span id="certification1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                    adipisci?</span></p>
+            <p><span id="certification2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                    adipisci?</span></p>
+        </div>
+        <div class="line"></div>
+        <div class="language_box">
+            <h3 class="heads">Languages Known</h3>
+            <p><span id="languages">Lorem ipsum dolor sit amet. lorem</span></p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function updateResume() {
+
+            // Retrieve values from localStorage
+            var firstName = localStorage.getItem("firstName");
+            var lastName = localStorage.getItem("lastName");
+            var email = localStorage.getItem("email");
+            var mobile = localStorage.getItem("mobile");
+            var state = localStorage.getItem("state");
+            var country = localStorage.getItem("country");
+            var schoolName = localStorage.getItem("schoolName");
+            var board = localStorage.getItem("board");
+            var schoolPercentage = localStorage.getItem("schoolPercentage");
+            var schoolActivity = localStorage.getItem("schoolActivity");
+            var ugName = localStorage.getItem("ugName");
+            var ugCourse = localStorage.getItem("ugCourse");
+            var ugPercentage = localStorage.getItem("ugPercentage");
+            var ugActivity = localStorage.getItem("ugActivity");
+            var pgName = localStorage.getItem("pgName");
+            var pgCourse = localStorage.getItem("pgCourse");
+            var pgPercentage = localStorage.getItem("pgPercentage");
+            var pgActivity = localStorage.getItem("pgActivity");
+            var skills = localStorage.getItem("skills");
+            var currentCompany = localStorage.getItem("currentCompany");
+            var currentPosition = localStorage.getItem("currentPosition");
+            var joiningDateCurrent = localStorage.getItem("joiningDateCurrent");
+            var work1 = localStorage.getItem("work1");
+            var work2 = localStorage.getItem("work2");
+            var internCompany = localStorage.getItem("internCompany");
+            var internPosition = localStorage.getItem("internPosition");
+            var joiningDateIntern = localStorage.getItem("joiningDateIntern");
+            var leavingDateIntern = localStorage.getItem("leavingDateIntern");
+            var intern1 = localStorage.getItem("intern1");
+            var intern2 = localStorage.getItem("intern2");
+            var achieve1 = localStorage.getItem("achieve1");
+            var achieve2 = localStorage.getItem("achieve2");
+            var certificate1 = localStorage.getItem("certificate1");
+            var certificate2 = localStorage.getItem("certificate2");
+            var languages = localStorage.getItem("languages");
+
+            // Checking in Console
+            console.log('Retrieving firstName:', firstName);
+            console.log('Retrieving lastName:', lastName);
+            console.log('Retrieving email:', email);
+            console.log('Retrieving mobile:', mobile);
+            console.log('Retrieving state:', state);
+            console.log('Retrieving country:', country);
+            console.log('Retrieving schoolName:', schoolName);
+            console.log('Retrieving board:', board);
+            console.log('Retrieving schoolPercentage:', schoolPercentage);
+            console.log('Retrieving schoolActivity:', schoolActivity);
+            console.log('Retrieving ugName:', ugName);
+            console.log('Retrieving ugCourse:', ugCourse);
+            console.log('Retrieving ugPercentage:', ugPercentage);
+            console.log('Retrieving ugActivity:', ugActivity);
+            console.log('Retrieving pgName:', pgName);
+            console.log('Retrieving pgCourse:', pgCourse);
+            console.log('Retrieving pgPercentage:', pgPercentage);
+            console.log('Retrieving pgActivity:', pgActivity);
+            console.log('Retrieving skills:', skills);
+            console.log('Retrieving currentCompany:', currentCompany);
+            console.log('Retrieving currentPosition:', currentPosition);
+            console.log('Retrieving joiningDateCurrent:', joiningDateCurrent);
+            console.log('Retrieving work1:', work1);
+            console.log('Retrieving work2:', work2);
+            console.log('Retrieving internCompany:', internCompany);
+            console.log('Retrieving internPosition:', internPosition);
+            console.log('Retrieving joiningDateIntern:', joiningDateIntern);
+            console.log('Retrieving leavingDateIntern:', leavingDateIntern);
+            console.log('Retrieving intern1:', intern1);
+            console.log('Retrieving intern2:', intern2);
+            console.log('Retrieving achieve1:', achieve1);
+            console.log('Retrieving achieve2:', achieve2);
+            console.log('Retrieving certificate1:', certificate1);
+            console.log('Retrieving certificate2:', certificate2);
+            console.log('Retrieving languages:', languages);
+
+
+            // Changing Value
+            document.getElementById("first_name").textContent = firstName;
+            document.getElementById("last_name").textContent = lastName;
+            document.getElementById("email").textContent = email;
+            document.getElementById("mobile").textContent = mobile;
+            document.getElementById("state").textContent = state;
+            document.getElementById("country").textContent = country;
+            document.getElementById("school_name").textContent = schoolName;
+            document.getElementById("school_board").textContent = board;
+            document.getElementById("school_marks").textContent = schoolPercentage;
+            document.getElementById("school_activity").textContent = schoolActivity;
+            document.getElementById("ug_name").textContent = ugName;
+            document.getElementById("ug_course").textContent = ugCourse;
+            document.getElementById("ug_marks").textContent = ugPercentage;
+            document.getElementById("ug_activities").textContent = ugActivity;
+            document.getElementById("pg_name").textContent = pgName;
+            document.getElementById("pg_course").textContent = pgCourse;
+            document.getElementById("pg_marks").textContent = pgPercentage;
+            document.getElementById("pg_activities").textContent = pgActivity;
+            document.getElementById("skills").textContent = skills;
+            document.getElementById("job_company").textContent = currentCompany;
+            document.getElementById("job_designation").textContent = currentPosition;
+            document.getElementById("job_starting_date").textContent = joiningDateCurrent;
+            document.getElementById("job_projects_done1").textContent = work1;
+            document.getElementById("job_projects_done2").textContent = work2;
+            document.getElementById("internship_company").textContent = internCompany;
+            document.getElementById("internship_designation").textContent = internPosition;
+            document.getElementById("internship_starting_date").textContent = joiningDateIntern;
+            document.getElementById("internship_ending_date").textContent = leavingDateIntern;
+            document.getElementById("internship_projects_done1").textContent = intern1;
+            document.getElementById("internship_projects_done2").textContent = intern2;
+            document.getElementById("achivements1").textContent = achieve1;
+            document.getElementById("achivements2").textContent = achieve2;
+            document.getElementById("certification1").textContent = certificate1;
+            document.getElementById("certification2").textContent = certificate2;
+            document.getElementById("languages").textContent = languages;
+            document.getElementById("designation").textContent = currentPosition;
+
+
+            var firstNameElement = document.getElementById("first_name");
+            if (firstNameElement) {
+                if (firstName !== null) {
+                    firstNameElement.innerHTML = firstName;
+                } else {
+                    console.error("No first name found in localStorage.");
+                }
+            } else {
+                console.error("Element with ID 'first_name' not found.");
+            }
+        }
+
+        // Clear localStorage 
+        window.addEventListener('beforeunload', function () {
+            localStorage.clear();
+        });
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('firstName')) {
+                updateResume();
+            } else {
+                console.error("No data found in localStorage.");
+            }
+        });
+
+        function downloadResumePNG() {
+
+            var resumeContent = document.getElementById('resume_div');
+
+            // Check if the resume content div is found
+            if (resumeContent) {
+                html2canvas(resumeContent).then(canvas => {
+                    var imgData = canvas.toDataURL('image/png');
+
+                    var link = document.createElement('a');
+                    link.download = 'resume.png';
+                    link.href = imgData;
+                    link.click();
+                });
+            } else {
+                console.error("Resume content div not found.");
+            }
+        }
+
+
+        function createNew() {
+            if (confirm("Creating a New Resume will remove the current one!! Are you sure you want to continue?")) {
+                localStorage.clear();
+                window.location.href = "input_form.html"; 
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
